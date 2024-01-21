@@ -1,5 +1,6 @@
 # A O(n) Python3 program to find maximum 
 # product pair in an array.
+# https://www.geeksforgeeks.org/find-maximum-product-of-a-triplet-in-array/
 import sys
 
 # Function to find a maximum product 
