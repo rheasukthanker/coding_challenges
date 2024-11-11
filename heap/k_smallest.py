@@ -6,12 +6,12 @@ Define a pair (u, v) which consists of one element from the first array and one 
 
 Return the k pairs (u1, v1), (u2, v2), ..., (uk, vk) with the smallest sums.
 
+Complexity
 Time complexity:
-O(n*log k)
+O(k * log(min(n1, n2))), where n1 and n2 are the lengths of nums1 and nums2. The loop runs k times, and each iteration involves heap operations, which take log(min(n1, n2)) time.
 
 Space complexity:
-O(k)
-
+O(min(k, n1 * n2)) for the heap and the result list.
 
 '''
 
