@@ -4,7 +4,16 @@ You are given two integer arrays nums1 and nums2 sorted in non-decreasing order 
 
 Define a pair (u, v) which consists of one element from the first array and one element from the second array.
 
-Return the k pairs (u1, v1), (u2, v2), ..., (uk, vk) with the smallest sums.'''
+Return the k pairs (u1, v1), (u2, v2), ..., (uk, vk) with the smallest sums.
+
+Time complexity:
+O(n*log k)
+
+Space complexity:
+O(k)
+
+
+'''
 
 class Solution:
     def kSmallestPairs(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
