@@ -3,7 +3,13 @@
 A good subarray is a subarray where:
 
 its length is at least two, and
-the sum of the elements of the subarray is a multiple of k.'''
+the sum of the elements of the subarray is a multiple of k.
+
+Idea Description:
+Compute cummulative sum of the array and for every element compute the remmainder wrt k of the sum. If the remainder is same, the subsequence sums up to k. 
+Additionally since we want the subsequence length to be greater than 1, ensure that this is the case, before returning the corresponding subsequence. 
+Complexity (worst case): Time-O(n) and Space O(n)
+'''
 class Solution(object):
     def checkSubarraySum(self, nums, k):
         """
