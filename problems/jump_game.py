@@ -2,6 +2,8 @@
 
 #Return true if you can reach the last index, or false otherwise.
 # https://leetcode.com/problems/jump-game/description/
+# At each position keep track of the max possible jumps ie. max of pre_jumps-1,curr_jumps. If we end up with curr jump 0 at any point, there is no way to reach the end of the array and return false. If we manage to iterate ofver the array, we can jump to the end of the array, in this case return true. 
+# Complexity: Time - O(n), Space O(1)
 class Solution(object):
     def canJump(self, nums):
         # Take curr variable to keep the current maximum jump...
