@@ -1,4 +1,4 @@
-# TC: O(n**2), SC: O(n)
+# TC: O(n**3), SC: O(n)
 class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         dupsi = set()
