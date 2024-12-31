@@ -1,5 +1,6 @@
 # Naive: O(n**3), iterate over all triplets space O(1)
 # Advanced: Use hash, dups : TC: O(n**2), SC: O(n)
+# https://leetcode.com/problems/3sum/description/?envType=company&envId=facebook&favoriteSlug=facebook-three-months
 # What I understand
 # 1. Duplicates, ensures that an element is processed only once (note that results are unique)
 # 2. Seen: saves the latest observed value of j corresponding to i
