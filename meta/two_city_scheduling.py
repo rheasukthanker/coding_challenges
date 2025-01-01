@@ -1,4 +1,5 @@
 '''A company is planning to interview 2n people. Given the array costs where costs[i] = [aCosti, bCosti], the cost of flying the ith person to city a is aCosti, and the cost of flying the ith person to city b is bCosti.'''
+# TC: O(nlogn) SC O(n)
 class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
         # Sort by a gain which company has 
