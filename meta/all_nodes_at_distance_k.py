@@ -1,0 +1,39 @@
+'''Given the root of a binary tree, the value of a target node target, and an integer k, return an array of the values of all nodes that have a distance k from the target node.
+
+You can return the answer in any order.
+
+'''
+#TC: O(n), SC: O(n)
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
+        # Recursively add a parent pointer to each node.
+        def add_parent(cur, parent):
+            if cur:
+                cur.parent = parent
+                add_parent(cur.left, cur)
+                add_parent(cur.right, cur) 
+        add_parent(root, None)
+        
+        answer = []
+        visited = set()
+        def dfs(cur, distance):
+            if not cur or cur in visited:
+                return
+            visited.add(cur)
+            if distance == 0:
+                answer.append(cur.val)
+                return
+            dfs(cur.parent, distance - 1)
+            dfs(cur.left, distance - 1)
+            dfs(cur.right, distance - 1)
+            
+        dfs(target, k)
+        
+        return answer
