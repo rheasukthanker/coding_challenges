@@ -6,7 +6,7 @@ You may imagine that nums[-1] = nums[n] = -∞. In other words, an element is al
 
 You must write an algorithm that runs in O(log n) time.'''
 # TC: O(n), SC: O(1)
-
+# https://leetcode.com/problems/find-peak-element/
 class Solution:
     def findPeakElement(self, nums):
         for i in range(len(nums) - 1):
