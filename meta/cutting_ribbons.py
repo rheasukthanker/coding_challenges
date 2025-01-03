@@ -11,6 +11,22 @@ Your task is to determine the maximum length of ribbon, x, that allows you to cu
 # Idea advanced: Use binary search to reduce the O(m) (m= max ribbon length) to O(logm) by using binary search, Within each binary search iteration we use O(n) to check if a cut length is valid. A cut length l, is valid if total pieces of length l after cutting are equal to or exceed k. 
 # TC: O(nlogm)
 # SC: O(1)
+# https://leetcode.com/problems/cutting-ribbons/
+class Solution:
+    def maxLength(self, ribbons: list[int], k: int) -> int:
+        right = max(ribbons)
+        left = 0
+        while left < right:
+            mid = (right + left + 1) // 2
+            total_ribbons = 0
+            for r in ribbons:
+                total_ribbons += r // mid  # Fix accumulation
+            if total_ribbons >= k:
+                left = mid   # Adjust to progress loop
+            else:
+                right = mid - 1
+        return left  # Return the largest valid mid
+
 class Solution:
     def maxLength(self, ribbons: list[int], k: int) -> int:
         # Binary search bounds
